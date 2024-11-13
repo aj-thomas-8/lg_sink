@@ -38,6 +38,12 @@ pub fn log(msg: &str, level: LogLevel) {
     }
 }
 
+/// Clears the terminal screen
+pub fn clear() {
+    let clr_msg = "[CLEAR]";
+    let _ = (&*STREAM).write_all(clr_msg.as_bytes());
+}
+
 #[macro_export]
 macro_rules! info {
     ($msg:expr) => {
