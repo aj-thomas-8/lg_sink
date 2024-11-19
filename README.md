@@ -8,12 +8,12 @@ __Note__: lg_sink is configured to "write" logs only if the application is built
 (lg_sink is not currently available as a crate)
 - Clone the repo
 - Add `lg_sink` as a dependency to the tui Rust project
-  ```
+  ```toml
   [dependencies]
   lg_sink = { path = "<path-to-lg_sink-repo>/lg_sink" }
   ```
 Example use case:
-```
+```rust
 use std::io;
 
 fn main() {
